@@ -1,0 +1,11 @@
+  <form>
+  <label for="fNombre" id="lblNombre">Indica tu Nombre:</label>
+  <input type="text" id="fNombre" name="fNombre" [(ngModel)]="nombre">
+  <label for="fIdea" id="lblIdea">Comparte una idea:</label>
+  <input type="text" id="fIdea" name="fIdea" [(ngModel)]="idea">
+  <button (click)="aniadir2(idea)">Añadir</button>
+  </form>
+  <ul >
+    <li *ngFor="let idea of aIdea">{{idea}}</li>
+  </ul>
+  
