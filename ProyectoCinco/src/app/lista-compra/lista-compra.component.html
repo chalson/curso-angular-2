@@ -1,0 +1,16 @@
+<p>
+  A checkList
+</p>
+    
+<span *ngFor="let elem of listaCompra; let i=index">
+  <p>
+    <input type="checkbox" />{{i}}. {{elem.texto}}
+    <button (click)="borrar(i)">Borrar</button>
+  </p>
+  </span>
+  <form id="formulario">
+    <label for="fNombre" id="lblNombre">Elemento:</label>
+    <input type="text" id="fNombre" name="fNombre" [(ngModel)]="nombre">
+    <button (click)="nuevo()">Añadir</button>
+  </form>
+

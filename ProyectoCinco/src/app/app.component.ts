@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-
+import {MiServicioService} from './mi-servicio/mi-servicio.service'
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Comunicación entre componentes';
-  miTexto = '';
+  //miservicio: MiServicioService;
+  miservicio=new MiServicioService();
+  miTexto = this.miservicio.propiedadServicio;
+
+  
   muestraTexto(cadena: string){
-    this.miTexto=cadena;
+    this.miTexto='texto';
+    
   }
 }
